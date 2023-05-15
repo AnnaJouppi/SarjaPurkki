@@ -1,0 +1,6 @@
+POST  http://localhost:3000/sarjapurkki
+Content-Type:application/json
+
+{
+    "showname" : "Mountain Vets"
+}

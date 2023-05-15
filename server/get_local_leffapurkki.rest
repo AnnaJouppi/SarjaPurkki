@@ -1,0 +1,6 @@
+GET http://localhost:3000/leffapurkki
+Content-Type: application/json
+
+{
+    "text": "Toivottavasti tämä toimii!"
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link id="stylelink" rel="stylesheet" href="styles.css">
+    <!-- Ladataan hampurilaismenun kuvat -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <title>SarjaPurkki</title>
+</head>
+<body>
+    <ul id="navbar" class="navmenu"> 
+        <li id="titletext">SarjaPurkki</li>
+        <li class="menuitem"><a href="#">Home</a></li>
+        <li class="menuitem"><a href="person.html">People Search</a></li>
+        <li class="menuitem"><a href="reviews.html">Reviews</a></li>
+        <li class="menuitem"><a href="about.html">About app</a></li>
+        <li class="toggle"><a href="#"><i class="fa fa-bars"></i></a></li>
+      </ul>
+</nav>
+<div id="reviewinfo">
+    <p>Here are the latest reviews!</p>
+    <p>Leave your own review from <a href="reviewform.html">here</a>.</p>
+    </div>
+    <div id="container"></div>
+    <script src="getshows.js"></script>
+</body>
+</html>

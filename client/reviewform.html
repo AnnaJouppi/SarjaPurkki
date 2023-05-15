@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link id="stylelink" rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+    <!-- Ladataan hampurilaismenun kuvat -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <title>SarjaPurkki</title>
+</head>
+<body>
+    <ul id="navbar" class="navmenu"> 
+        <li id="titletext"> <a href="index.html">SarjaPurkki</a></li>
+        <li class="menuitem"><a href="person.html">People Search</a></li>
+        <li class="menuitem"><a href="reviews.html">Reviews</a></li>
+        <li class="menuitem"><a href="about.html">About app</a></li>
+        <li class="toggle"><a href="#"><i class="fa fa-bars"></i></a></li>
+      </ul>
+</nav>
+    
+    <div id="formcontainer">
+        <form id="reviewform" method="post" action="/sarjapurkki" target="_blank">
+            <div id="formfields">
+                <label for="showname">Show Name</label>
+                <input id="showname" type="text" name="showname">
+                <label for="yourname">Your Name</label>
+                <input id="yourname" type="text" name="yourname">
+                <label for="score">Score 1-10</label>
+                <input id="score" type="number" min="1" max="10" name="score">
+                <br>
+                <label>Review</label>
+                <textarea id="textarea" cols="30" rows="10" name="reviewtext"></textarea>
+                <br>
+                <button id="submitButton" form="reviewform">Send Review!</button>
+            </div>
+                <div id="reviewhelp">
+                    <h4>Tips for a good review!</h4>
+                    <img id="tipsimg" src="https://images.pexels.com/photos/1410226/pexels-photo-1410226.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="tips">
+                    <ul class="tips">
+                        <li><i class="fa fa-check-circle"></i> Focus on the show, not on the cast or their personal life</li>
+                        <li><i class="fa fa-check-circle"></i> Be honest</li>
+                        <li><i class="fa fa-check-circle"></i> Be specific about what you liked and didn't like about the show</li>
+                        <li><i class="fa fa-check-circle"></i> Avoid spoilers or any information that might spoil the show for those who haven't seen it yet</li>
+                    </ul>
+                </div>
+            
+        </form>
+    </div>
+    <script src="rev-formmobilemenu.js"></script>
+</body>
+</html>

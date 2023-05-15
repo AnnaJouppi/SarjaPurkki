@@ -1,0 +1,273 @@
+body {
+    font-size: 1em;
+    font-family: 'Lora', serif;
+}
+
+.content {
+    margin: auto;
+    display: block;
+    width: 920px;
+    background-image: linear-gradient(180deg, #fadfef, #d5c0f0);
+    box-shadow: 0px 0px 20px rgb(245, 166, 225);
+    border-radius: 10px;
+}
+
+.itembox {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    /* font-family: 'Playfair Display', serif; */
+    padding: 20px;
+    width: 900px;
+}
+
+.image {
+    position: relative;
+    display: inline;
+    float: left;
+    padding-right: 10px;
+}
+
+.noimage {
+    position: relative; 
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    width: 210px;
+    height: 295px;
+}
+
+.showsummary {
+    line-height: 150%;
+}
+
+button {
+    background-color: rgb(231, 47, 161);
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* About-sivu */
+
+#aboutinfo {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/* Navigointipalkki */
+
+#navbar {
+    font-family: 'Playfair Display', 'serif';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    gap: 30px;
+    height: 50px;
+    background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+    color: white;
+    box-shadow: 0px 0px 10px rgb(243, 25, 189);
+  }
+
+  li {
+      margin-right: 20px;
+  }
+  li a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .toggle {
+    display: none;
+    }
+
+  /* Navigointipalkki päättyy */
+
+  #titletext {
+      font-size: 1.5em;
+      letter-spacing: 0.5rem;
+      margin-left: 10px;
+      margin-right: auto;
+  }
+
+
+   /* reviews-sivu */
+  .showtitle {
+      font-weight: bold;
+      color: #6f08eb;;
+  }
+ 
+
+  #reviewcontainer {
+      margin: 0 200px;
+      width: 1440px;
+      display: flex;
+      flex-direction: row;
+      align-content: flex-start;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .reviewbox {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      background-color: #efe7f8;
+      padding: 5px;
+      border-radius: 10px;
+  }
+
+  .fa-star, .fa-user, .fa-comment {
+    color: #fd1da4;
+  }
+
+  #description {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+
+    /* Sarjan- ja henkilön haku-div */
+
+  #searchdiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Lora', serif;
+  }
+
+    input {
+        border: 2px solid rgb(136, 14, 136);
+    }
+
+
+  /* Mobiilinäkymä */
+
+  /* Navigointipalkki */
+
+  @media all and (max-width: 500px){
+      .navmenu {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+      }
+
+      .navmenu li a {
+          display: block;
+          padding: 5px;
+      }
+
+        .toggle {
+            display: flex;
+            order: 1;
+            font-size: 20px;
+            }
+
+        .menuitem {
+            order: 2;
+            width: 100%;
+            text-align: center;
+            display: none;
+            background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+            
+        }
+
+        .active .menuitem {
+            display: block;
+            
+        }
+
+        /* Sarjan- ja henkilön haku-div */
+
+        #searchdiv {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+
+          /* Normaali näkymä */
+
+          #container {
+              display: flex;
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: auto;
+           
+          }
+
+          .itembox {
+              display: flex;
+              flex-direction: column;
+              width: auto;
+              justify-content: center;
+              align-items: center;
+              font-size: 0.8em;
+          }
+
+          .showotherinfo {
+            align-self: center;
+          }
+
+          .showsummary {
+              margin: 12px 20px;
+          }
+
+          .image {
+            position: relative;
+            display: inline;
+            /* float: left; */
+            padding-right: 10px;
+            width: 210px;
+            height: 295px;
+        }
+        
+        .noimage {
+            position: relative; 
+            display: inline;
+            /* float: left; */
+            padding-right: 10px;
+            width: 210px;
+            height: 295px;
+        }
+       /* Reviews-sivu */
+
+       #reviewcontainer {
+           margin: 0 auto;
+           width: 90%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+
+
+       .reviewbox {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        background-color: #efe7f8;
+        padding: 5px;
+        border-radius: 10px;
+    }
+  }
+
+ 
+  

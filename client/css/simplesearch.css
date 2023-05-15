@@ -1,0 +1,187 @@
+body {
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.itembox {
+    flex-direction: row;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1em;
+    background-image: linear-gradient(0deg, #fd1da4, #6f08eb);
+    width: 210px;
+}
+
+
+.image {
+    position: relative;
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    width: 210px;
+    height: 295px;
+}
+
+.noimage {
+    position: relative; 
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    width: 210px;
+    height: 295px;
+}
+
+input {
+    border: 2px solid rgb(136, 14, 136);
+}
+
+button {
+    background-color: rgb(231, 47, 161);
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* Navigaatiopalkki */
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    gap: 30px;
+    height: 50px;
+    background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+    color: white;
+    box-shadow: 0px 0px 10px rgb(243, 25, 189);
+  }
+
+  li {
+      margin-right: 20px;
+  }
+  li a {
+      color: white;
+      text-decoration: none;
+  }
+
+  #titletext {
+      font-size: 1.5em;
+      letter-spacing: 0.5rem;
+      margin-left: 10px;
+      margin-right: auto;
+  }
+/* Piilotetaan isossa näkymässä hampurilaismenu */
+
+  .toggle {
+    display: none;
+    }
+
+      /* Sarjan- ja henkilön haku-div */
+
+      #searchdiv {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+  }
+
+   /* Mobiilinäkymä */
+
+  /* Navigointipalkki */
+
+  @media all and (max-width: 500px){
+    .navmenu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+    }
+
+    .navmenu li a {
+        display: block;
+        padding: 5px;
+    }
+
+      .toggle {
+          display: flex;
+          order: 1;
+          font-size: 20px;
+          }
+
+      .menuitem {
+          order: 2;
+          width: 100%;
+          text-align: center;
+          display: none;
+          background-image: linear-gradient(90deg, #fd1da4, #6f08eb);
+          
+      }
+
+      .active .menuitem {
+          display: block;
+          
+      }
+
+      /* Sarjan- ja henkilön haku-div */
+
+      #searchdiv {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+    
+}
+    /* Hakutulokset */
+
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+.itembox {
+    flex-direction: row;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1em;
+    background-image: linear-gradient(0deg, #fd1da4, #6f08eb);
+    width: 210px;
+}
+
+
+.image {
+    position: relative;
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    width: 210px;
+    height: 295px;
+}
+
+.noimage {
+    position: relative; 
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    width: 210px;
+    height: 295px;
+}
+
+/* Mobiilinäkymä päättyy */
