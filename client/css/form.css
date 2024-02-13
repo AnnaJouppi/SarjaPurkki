@@ -1,113 +1,117 @@
 /* Lomake-sivu, reviewform.html */
 
+h4 {
+  text-align: center;
+}
+
 #formcontainer {
-    display: flex;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-    height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* width: 960px;
+  height: 600px; */
 }
 
 .fa-check-circle {
-    color: rgb(231, 47, 161);
+  color: rgb(231, 47, 161);
 }
 
 #tipsimg {
-    display: inline;
-    margin: 0 auto;
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    border: solid 2px rgb(231, 47, 161);
+  display: inline;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border: solid 2px rgb(231, 47, 161);
 }
 
 #reviewform {
-    display: flex;
-    height: 600px;
-    gap: 20px;
+  display: flex;
+  height: 600px;
+  gap: 5em;
 }
 
-h4 {
-    text-align: center;
-}
-
-.tips { 
-    list-style-type: none;
-    
+.tips {
+  list-style-type: none;
 }
 
 #reviewhelp {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lora', serif;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  font-family: "Lora", serif;
 }
 
 #reviewhelp li {
-    font-style: italic;
+  padding: 0.5em 0em;
+  font-style: italic;
 }
 
 #formfields {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 600px;
-    height: 600px;    
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+#submitButton {
+  cursor: pointer;
 }
 
 label {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
- input{
-    line-height: 2em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: solid 1px rgb(231, 47, 161);
-} 
+input {
+  line-height: 2em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 1px rgb(231, 47, 161);
+}
 
 textarea {
-    border: solid 1px rgb(231, 47, 161);
+  border: solid 1px rgb(231, 47, 161);
 }
 
 button {
-    background-color: rgb(231, 47, 161);
-    color: white;
-    border: none;
-    padding: 10px;
+  background-color: rgb(231, 47, 161);
+  color: white;
+  border: none;
+  padding: 10px;
 }
 
 #sendFormButton {
-    font-size: 1.1em;
-    font-family: 'Lora', serif;
+  font-size: 1.1em;
+  font-family: "Lora", serif;
 }
 
 @media all and (max-width: 700px) {
+  #formcontainer {
+    width: auto;
+    display: flex;
+  }
 
-    #formcontainer {
-        width: auto;
-        display: flex;
-    }
+  #reviewform {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    #reviewform {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  #formfields {
+    width: auto;
+  }
 
-    #formfields {
-        width: auto;
-    }
-
-    #tipsimg {
-        display: inline;
-        margin: 0 auto;
-        width: 90%;
-        height: auto;
-        padding: 10px;
-        border: solid 2px rgb(231, 47, 161);
-    }
+  #tipsimg {
+    display: inline;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    border: solid 2px rgb(231, 47, 161);
+  }
 }
-

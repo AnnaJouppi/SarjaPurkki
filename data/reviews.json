@@ -1,0 +1,50 @@
+[
+  {
+    "showname": "Xena",
+    "yourname": "Anna Jouppi",
+    "score": 10,
+    "reviewtext": "Best show ever!"
+  },
+  {
+    "showname": "Stranger Things",
+    "yourname": "Will Smith",
+    "score": 8,
+    "reviewtext": "Really enjoyed the mystery and character development."
+  },
+  {
+    "showname": "The Crown",
+    "yourname": "Alice Johnson",
+    "score": 9,
+    "reviewtext": "A fascinating glimpse into the life of the British royal family. The historical accuracy and performances are top-notch."
+  },
+  {
+    "showname": "Game of Thrones",
+    "yourname": "Mike Brown",
+    "score": 8,
+    "reviewtext": "Epic in scope and visually stunning, but the final season felt rushed and left many fans disappointed."
+  },
+  {
+    "showname": "The Mandalorian",
+    "yourname": "Chris Green",
+    "score": 9,
+    "reviewtext": "A refreshing addition to the Star Wars saga with engaging characters and an intriguing plot. Baby Yoda stole the show!"
+  },
+  {
+    "showname": "BoJack Horseman",
+    "yourname": "Sam Reed",
+    "score": 7,
+    "reviewtext": "An animated show that's not afraid to tackle heavy themes like depression and addiction with a mix of humor and heart."
+  },
+  {
+    "showname": "The Office",
+    "yourname": "Alex Lee",
+    "score": 8,
+    "reviewtext": "A hilarious and sometimes cringeworthy look at office life. The dynamic between characters creates some unforgettable moments."
+  },
+  {
+    "showname": "True Detective",
+    "yourname": "Elina Halttunen",
+    "score": "10",
+    "reviewtext": "My favorite show ever! I love this."
+  }
+]

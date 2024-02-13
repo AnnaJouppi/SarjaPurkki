@@ -2,14 +2,14 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const password = process.env.PASSWORD;
 const app = express();
 const ejs = require("ejs");
+const fs = require("fs");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening to port: ${PORT}`));
 
-// this is needed for html form to submit data to MondoDB
+// this is needed for html form to submit data to JSON
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // convert json string to json object (from request)
@@ -21,60 +21,48 @@ app.use(cors());
 app.set("view engine", "ejs");
 app.set("views", "../client/views");
 
-// mongo here...
-const mongoose = require("mongoose");
-const CONNECTION_URL = `mongodb+srv://dbUser:${password}@cluster0.ocuog.mongodb.net/sarjapurkki?retryWrites=true&w=majority`;
-mongoose.connect(CONNECTION_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const reviewFilePath = "../data/reviews.json";
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function () {
-  console.log("Database connected");
-});
+// Use json to save and post the review data
 
-// scheema
-// objects going to the database
-const purkkiSchema = new mongoose.Schema({
-  showname: { type: String, required: false },
-  yourname: { type: String, required: false },
-  score: { type: Number, required: false },
-  reviewtext: { type: String, required: false },
-});
+// Read reviews from JSON file and parse them
 
-// model, all 3 have to be written or it won't work. Last one is the collection!
-const Purkki = mongoose.model("Purkki", purkkiSchema, "purkki");
+function readReviews() {
+  const jsonData = fs.readFileSync(reviewFilePath);
+  return JSON.parse(jsonData);
+}
 
-// Routes Leffapurkki API
+// Write reviews to JSON file
+function writeReviews(data) {
+  const jsonData = JSON.stringify(data, null, 2);
+  fs.writeFileSync(reviewFilePath, jsonData);
+}
 
-// get
-app.get("/sarjapurkki", async (request, response) => {
-  const reviews = await Purkki.find({});
+// Routes
+
+// get route for all reviews
+app.get("/sarjapurkki", (request, response) => {
+  const reviews = readReviews();
   response.json(reviews);
-  //console.log(response.body)
 });
 
 // get route for ejs
 app.get("/reviews.html", (req, res) => {
-  Purkki.find({}, function (err, shows) {
-    res.render("reviews.ejs", {
-      purkkiList: shows,
-    });
-  });
+  const reviews = readReviews();
+  res.render("reviews.ejs", { purkkiList: reviews });
 });
 
-// post
-app.post("/sarjapurkki", async (request, response) => {
-  console.log(request.body);
-  const newPurkki = new Purkki({
+// post route to add new review
+app.post("/sarjapurkki", (request, response) => {
+  const newReview = {
     showname: request.body.showname,
     yourname: request.body.yourname,
     score: request.body.score,
     reviewtext: request.body.reviewtext,
-  });
-  const savedPurkki = await newPurkki.save();
+  };
+  const reviews = readReviews();
+  reviews.push(newReview);
+  writeReviews(reviews);
   response.sendFile(__dirname + "/form-ty.html"); // sent after submitting review form
 });
 
