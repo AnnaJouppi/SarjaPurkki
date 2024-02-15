@@ -1,9 +1,12 @@
 # SarjaPurkki 📺
 
 ## Introduction 🧾
-A full-stack application that allows users to search for information about TV shows and actors, as well as other contributors to the series. It uses the [TV Maze API](https://www.tvmaze.com/api) to retrieve data.
+A full-stack application that allows users to search for information about TV shows and actors. It uses the [TV Maze API](https://www.tvmaze.com/api) to retrieve data. Feel free to clone the repo and try it for yourself!
 
 **Technologies used:** HTML, CSS, JavaScript, Node.js
+
+**Installation**
+
 
 ## Images
 
