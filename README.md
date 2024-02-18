@@ -6,6 +6,12 @@ A full-stack application that allows users to search for information about TV sh
 **Technologies used:** HTML, CSS, JavaScript, Node.js
 
 **Installation**
+1. Clone the repository
+2. Start your code editor and navigate to Sarjapurkki/server folder
+3. Run `npm install` command on terminal
+4. Run `npm run dev` command on terminal
+5. Navigate to http://localhost:3000 on your web browser
+6. Search for your favorite tv shows!
 
 
 ## Images
